@@ -5,24 +5,25 @@ import java.time.LocalDate;
 public class Task {
 	//
 	private LocalDate date;
-	private String str;
+	private String task;
 	
-	public Task(LocalDate date, String str) {
+	public Task(LocalDate date, String task) {
 		this.date = date;
-		this.str = str;
+		this.task = task;
 	}
-
+	
 	public LocalDate getDate() {
-		return date;
+		return this.date;
 	}
 
-	public String getStr() {
-		return str;
+	public String getTask() {
+		return this.task;
 	}
+	
 	
 	@Override
 	public String toString() {
-		return date + " " + str;
+		return this.date + " " + this.task;
 	}
 
 }
