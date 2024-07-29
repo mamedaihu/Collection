@@ -1,9 +1,27 @@
 package practice;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class Chapter5 {
 
-	public static void main(String[] args) {
-		// TODO 自動生成されたメソッド・スタブ
+	public static void main(String[] args) throws Exception{
+		List<Task> listTask = new ArrayList<>();
+		
+		listTask.add(new Task(LocalDate.of(2021, 10, 21), "牛乳を買う。"));
+		listTask.add(new Task(LocalDate.of(2021, 9, 15), "○○社面談。"));
+		listTask.add(new Task(LocalDate.of(2021, 12, 4), "手帳を買う。"));
+		listTask.add(new Task(LocalDate.of(2021, 8, 10), "散髪に行く。"));
+		listTask.add(new Task(LocalDate.of(2021, 11, 9), "スクールの課題を解く。"));
+		
+		listTask.sort(Comparator.comparing(Task :: getDate));
+		for(Task task : listTask) {
+			System.out.println(task);
+		}
+		
+		
 
 	}
 
